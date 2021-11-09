@@ -1,7 +1,8 @@
-package com.koshake1.geolocationapp
+package com.koshake1.geolocationapp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.koshake1.geolocationapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
