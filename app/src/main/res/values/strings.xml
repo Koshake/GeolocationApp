@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GeolocationApp</string>
+    <string name="markers_list">Markers List</string>
+    <string name="header">Header</string>
+    <string name="annotation">Annotation</string>
+    <string name="Lon_Lat">Lon:Lat</string>
 </resources>

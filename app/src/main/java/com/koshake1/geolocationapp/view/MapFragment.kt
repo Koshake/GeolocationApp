@@ -1,9 +1,7 @@
 package com.koshake1.geolocationapp.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -33,16 +31,11 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initMap()
-    }
-
-    private fun initMap() {
-        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
-        mapFragment?.getMapAsync(this)
+        setHasOptionsMenu(true)
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
         googleMap.setOnMapClickListener { latlng ->
-            googleMap.clear()
 
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng, MAP_ZOOM))
 
@@ -51,5 +44,15 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                 .position(location)
                 .title("${latlng.latitude} : ${latlng.longitude}"))
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    private fun initMap() {
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
     }
 }
