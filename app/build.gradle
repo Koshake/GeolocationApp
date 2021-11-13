@@ -44,4 +44,15 @@ dependencies {
 
     // Google maps
     implementation 'com.google.android.gms:play-services-maps:18.0.0'
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+
+    //Lifecycle and ViewModel
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    //Koin
+    implementation 'org.koin:koin-android:2.0.1'
+    implementation 'org.koin:koin-android-viewmodel:2.0.1'
 }

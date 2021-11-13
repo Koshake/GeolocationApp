@@ -5,22 +5,20 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/item_margin"
-    tools:backgroundTint="@android:color/holo_blue_light">
+    android:backgroundTint="@color/marker_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+
+        <EditText
             android:id="@+id/title"
+            android:hint="@string/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_marginEnd="@dimen/item_text_margin"
-            android:layout_marginStart="@dimen/item_text_margin"
-            android:layout_marginTop="@dimen/item_text_margin"
-            tools:text="@string/header"
+            android:textColor="@android:color/black"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -36,7 +34,7 @@
             app:srcCompat="@drawable/ic_baseline_location_on_24"/>
 
         <TextView
-            android:id="@+id/lon_lat"
+            android:id="@+id/lat_lon"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/item_text_margin"
@@ -45,14 +43,15 @@
             app:layout_constraintTop_toBottomOf="@id/title"
             tools:text="@string/Lon_Lat" />
 
-        <TextView
+        <EditText
             android:id="@+id/body"
+            android:hint="@string/add_info"
             style="@style/TextAppearance.AppCompat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/item_text_margin"
             tools:text="@string/annotation"
-            app:layout_constraintTop_toBottomOf="@id/lon_lat"
+            app:layout_constraintTop_toBottomOf="@id/lat_lon"
             app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

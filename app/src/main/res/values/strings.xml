@@ -4,4 +4,7 @@
     <string name="header">Header</string>
     <string name="annotation">Annotation</string>
     <string name="Lon_Lat">Lon:Lat</string>
+    <string name="Lat_Lon_text">%1$f : %2$f</string>
+    <string name="title">Title</string>
+    <string name="add_info">Add information here</string>
 </resources>
